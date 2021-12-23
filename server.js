@@ -84,7 +84,7 @@ app.post("/email", (req, res) => {
   // send mail with defined transport object
   let mailOptions = {
     from: '"CDS Mail Contact" <cdsremohost@hotmail.com>', // sender address
-    to: "916falex@gmail.com", // list of receivers
+    to: "cdsremohost@hotmail.com", // list of receivers
     subject: "Schedule Request", // Subject line
     text: "output", // plain text body
     html: output, // html body
