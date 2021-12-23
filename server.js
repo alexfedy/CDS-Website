@@ -68,7 +68,8 @@ app.post("/email", (req, res) => {
 
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
+    // host: "smtp.gmail.com",
+    service: "hotmail",
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
@@ -82,7 +83,7 @@ app.post("/email", (req, res) => {
 
   // send mail with defined transport object
   let mailOptions = {
-    from: '"CDS Mail Contact" <techalex330@gmail.com>', // sender address
+    from: '"CDS Mail Contact" <cdsremohost@hotmail.com>', // sender address
     to: "916falex@gmail.com", // list of receivers
     subject: "Schedule Request", // Subject line
     text: "output", // plain text body
