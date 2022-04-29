@@ -17,6 +17,7 @@ html {
 
 /*snap scrolling..... not good for this site*/
 /* 
+
 .all{
 	scroll-snap-type: y mandatory;
 	overflow-y: scroll;

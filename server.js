@@ -16,6 +16,7 @@ app.use(
       styleSrc: [
         "'self'",
         "cdnjs.cloudflare.com",
+        "appointmentthing.com/css/meeting.embed.t1.css",
         "fonts.gstatic.com",
         "fonts.googleapis.com",
       ],
@@ -23,6 +24,7 @@ app.use(
         "'self'",
         "unpkg.com",
         "ajax.googleapis.com",
+        "appointmentthing.com/js/meeting.embed.t1.init.js",
         "'unsafe-inline'",
       ],
       fontSrc: [
