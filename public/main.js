@@ -41,11 +41,13 @@ if (history.scrollRestoration) {
 //form submission to server
 $("form").on("submit", (e) => {
   e.preventDefault();
-  const uname = $("#uname").val().trim();
+  var usern = $("#uname").val().trim();
+  const uname = usern.replace(/[^a-zA-Z ]/g, "");
   const uemail = $("#uemail").val().trim();
   const udate = $("#udate").val().trim();
   const utime = $("#utime").val().trim();
-  const utext = $("#utext").val().trim();
+  var usert = $("#utext").val().trim();
+  const utext = usert.replace(/[^a-zA-Z0-9]/g, "");
   const uurl = $("#uurl").val().trim();
   const data = {
     uname,
