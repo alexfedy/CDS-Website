@@ -16,7 +16,6 @@ app.use(
       styleSrc: [
         "'self'",
         "cdnjs.cloudflare.com",
-        "appointmentthing.com/css/meeting.embed.t1.css",
         "fonts.gstatic.com",
         "fonts.googleapis.com",
       ],
@@ -24,7 +23,6 @@ app.use(
         "'self'",
         "unpkg.com",
         "ajax.googleapis.com",
-        "appointmentthing.com/js/meeting.embed.t1.init.js",
         "'unsafe-inline'",
       ],
       fontSrc: [
@@ -71,7 +69,7 @@ app.post("/email", (req, res) => {
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
     // host: "smtp.gmail.com",
-    service: "hotmail",
+    service: "smtp-mail.outlook.com",
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
@@ -81,6 +79,7 @@ app.post("/email", (req, res) => {
     tls: {
       rejectUnauthorized: false,
     },
+    requireTLS: true,
   });
 
   // send mail with defined transport object
