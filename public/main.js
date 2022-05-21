@@ -44,16 +44,12 @@ $("form").on("submit", (e) => {
   var usern = $("#uname").val().trim();
   const uname = usern.replace(/[^a-zA-Z ]/g, "");
   const uemail = $("#uemail").val().trim();
-  const udate = $("#udate").val().trim();
-  const utime = $("#utime").val().trim();
   var usert = $("#utext").val().trim();
   const utext = usert.replace(/[^a-zA-Z0-9]/g, "");
   const uurl = $("#uurl").val().trim();
   const data = {
     uname,
     uemail,
-    udate,
-    utime,
     utext,
     uurl,
   };

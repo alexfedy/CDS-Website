@@ -59,12 +59,10 @@ app.post("/email", (req, res) => {
   if (info.uurl != "") {
     return;
   }
-  const output = `<h3>New Schedule Request</h3>
+  const output = `<h3>New Message Request</h3>
     <h4>Name: </h4><p>${info.uname}</p>
     <h4>Email: </h4><p>${info.uemail}</p>
-    <h4>Date: </h4><p>${info.udate}</p>
-    <h4>Time: </h4><p>${info.utime}</p>
-    <h4>Info: </h4><p>${info.utext}</p>`;
+    <h4>Message: </h4><p>${info.utext}</p>`;
 
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
